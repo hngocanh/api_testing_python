@@ -1,0 +1,13 @@
+[project]
+name = "api-testing-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "json-schema>=0.3",
+    "pytest>=9.0.2",
+    "pytest-html>=4.2.0",
+    "requests>=2.32.5",
+]
