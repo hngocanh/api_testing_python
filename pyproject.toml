@@ -10,4 +10,9 @@ dependencies = [
     "pytest>=9.0.2",
     "pytest-html>=4.2.0",
     "requests>=2.32.5",
+    "pytest-timeout>=2.4.0",
+    "jsonschema>=4.26.0",
 ]
+
+[tool.pytest.ini_options]
+pythonpath = "."
