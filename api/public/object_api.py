@@ -4,7 +4,15 @@ class PublicObjectAPI(BaseClient):
     ENDPOINT = "/objects"
 
     def get_all(self, ids=None):
-        params = [("id", i) for i in ids] if ids else None
+        # If ids is provided, create a list of tuples for query parameters
+        # Example: ids=[1, 2, 3] becomes [("id", 1), ("id", 2), ("id", 3)]
+        if ids:
+            params = []
+            for i in ids:
+                params.append(("id", i))
+        else:
+            params = None
+        
         return self.get(self.ENDPOINT, params=params)
     
     def get_by_id(self, object_id):
