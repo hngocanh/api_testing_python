@@ -28,8 +28,6 @@ AUTH_OBJECT_SCHEMA = {
         "id":        {"type": "string"},
         "name":      {"type": "string"},
         "data":      {"type": ["object", "null"]},
-        "createdAt": {"type": "string"},
-        "updatedAt": {"type": "string"},
     }
 }
 

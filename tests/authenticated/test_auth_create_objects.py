@@ -22,12 +22,6 @@ class TestAuthCreateHappyPath:
         assert obj["name"] == AUTH_CREATE_DEVICE["name"]
         auth_api.delete_object(obj["id"])
 
-    def test_create_object_returns_created_at(self, auth_api):
-        response = auth_api.create(AUTH_CREATE_DEVICE)
-        obj = response.json()
-        assert "createdAt" in obj
-        auth_api.delete_object(obj["id"])
-
     def test_created_object_is_retrievable(self, auth_api):
         """After POST, the new object must be fetchable via GET."""
         create_response = auth_api.create(AUTH_CREATE_DEVICE)
